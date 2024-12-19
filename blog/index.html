@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <script>
+        // 각 카테고리와 파일 경로 정의
+        const posts = {
+            food: [
+                { title: "Pasta Recipe", url: "./food/pasta-recipe.html" },
+                { title: "Cake Tips", url: "./food/cake-tips.html" }
+            ],
+            engineering: [
+                { title: "Web Development", url: "./engineering/web-development.html" },
+                { title: "AI Basics", url: "./engineering/ai-basics.html" }
+            ]
+        };
 
+        // 동적으로 글 목록 생성
+        function loadPosts() {
+            const main = document.getElementById("blog-content");
+            for (const [category, articles] of Object.entries(posts)) {
+                const categoryHeader = document.createElement("h2");
+                categoryHeader.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+                main.appendChild(categoryHeader);
+
+                const list = document.createElement("ul");
+                articles.forEach(article => {
+                    const listItem = document.createElement("li");
+                    const link = document.createElement("a");
+                    link.textContent = article.title;
+                    link.href = article.url;
+                    listItem.appendChild(link);
+                    list.appendChild(listItem);
+                });
+                main.appendChild(list);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", loadPosts);
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Blog</h1>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+    <main id="blog-content">
+        <!-- 글 목록이 동적으로 여기에 추가됩니다 -->
+    </main>
+</body>
+</html>
