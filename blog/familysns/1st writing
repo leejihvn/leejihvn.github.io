@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasta Recipe</title>
+</head>
+<body>
+    <article>
+        <header>
+            <h1>Pasta Recipe</h1>
+            <p>Published: 2024-12-18 | Category: Food</p>
+        </header>
+        <section>
+            <p>Welcome to the best pasta recipe ever! Here's what you'll need:</p>
+            <ul>
+                <li>Pasta</li>
+                <li>Tomato Sauce</li>
+                <li>Garlic</li>
+            </ul>
+            <p>Follow these steps to make a delicious meal...</p>
+        </section>
+    </article>
+</body>
+</html>
